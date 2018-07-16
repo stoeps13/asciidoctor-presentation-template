@@ -13,13 +13,16 @@
 :quick-uri: http://www.stoeps.de
 :numbered:
 
-== Start a new presentation
+== Clone and install software
 
 [source,bash]
 ----
 git clone git@github.com:stoeps13/asciidoctor-presentation-template.git
 bundle config --local github.https true
 bundle --path=.bundle/gems --binstubs=.bundle/.bin
+cd reveal.js
+git submodule init
+git submodule update
 ----
 
 
