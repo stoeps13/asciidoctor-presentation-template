@@ -67,11 +67,25 @@ a|
 ** performance optimizing
 * OSS since late 1990ies
 ** Linux Kernel < 1.0
-** German Magazine DOS Magazin
+** German Magazine: DOS Magazin
 |===
 
-== Ein bisschen Geschichte
+== My history of documentation
 include::slide-froscon.adoc[]
+
+* MS Excel with Dropbox
+* MS Word with Sharepoint or Mail
+* Several Wiki engines
+* Evernote (Linux client long time a problem, new license limits devices)
+* Adding config with screenshots or copy & paste
+* Latest with opening in other Office version or product with 100% compatibility -> layout or document broken
+** sometimes switching printer is enough
+
+
+== Markdown and rst
+
+* Started writing in Markdown
+* Some software supports markdown directly
 
 [subs="attributes"]
 ++++
