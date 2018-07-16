@@ -51,41 +51,27 @@ a|
 ++++
 image::images/stoeps.png[300,200]
 icon:phone[] +49 173 8588719 +
-icon:envelope[] mailto:christoph.stoettner@panagenda.com[christoph.stoettner@panagenda.com] +
+icon:envelope[] mailto:christoph.stoettner@stoeps.de[christoph.stoettner@stoeps.de] +
 icon:linkedin[] https://linkedin.com/in/christophstoettner[linkedin.com/in/christophstoettner] +
-icon:wordpress[] https://www.stoeps.de[www.stoeps.de] +
+icon:link[] https://www.stoeps.de[www.stoeps.de] +
 icon:skype[] christophstoettner +
 icon:twitter[] https://twitter.com/stoeps[@stoeps] +
 ++++
 </div>
 ++++
 a|
-* Senior Consultant bei panagenda
-** IBM Domino seit 1999
-** IBM Connections seit 2009
-* Schwerpunkte
-** Migrationen, Installationen
-** Performance, Monitoring, Security
-** panagenda ConnectionsExpert
-** Microservices, IBM Cloud Private
+* Senior Consultant at panagenda
+* daily work
+** often means installing application servers
+** change config options
+** performance optimizing
+* OSS since late 1990ies
+** Linux Kernel < 1.0
+** German Magazine DOS Magazin
 |===
 
 == Ein bisschen Geschichte
 include::slide-froscon.adoc[]
-
-[%step]
-* Douglas Adams: +
-[%step]
-** Alles, was zum Zeitpunkt unserer Geburt bereits vorhanden war, wird als Bestandteil der natürlichen Ordnung empfunden.
-** Alles, was in der Zeit zwischen dem fünfzehnten und fünfunddreißigsten Lebensjahr erfunden wurde, ist aufregend, revolutionär und fördert vielleicht sogar die eigene Karriere.
-** **Alles, was nach deinem 35. Lebensjahr erfunden wurde, ist gegen die natürliche Ordnung der Dinge.**
-* https://martin.leyrer.priv.at/downloads/talks/2018/gpn18%20-%20Moderne%20Kommandozeilentools.pdf[Gestohlen bei Martin Leyrer - Moderne Kommandozeilen Werkzeuge]
-
-[NOTE.speaker]
---
-* Douglas Adams
---
-
 
 [subs="attributes"]
 ++++
