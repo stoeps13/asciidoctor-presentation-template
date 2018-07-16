@@ -1,0 +1,174 @@
+/*
+ * Description: Stylesheet revealjs presentation
+ * Author:      Christoph Stoettner
+ * Email:       christoph.stoettner@stoeps.de
+ **/
+@import "_variables.scss";
+@import url(../reveal.js/css/theme/white.css);
+
+.reveal {
+  font-family: Roboto, "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: normal;
+  color: #222;
+  .slide {
+      width: 1280px !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin: -24px 0 0 0 !important;
+    color: #222;
+    font-family: Roboto, "Source Sans Pro", Helvetica, sans-serif;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-transform: none !important;
+    text-shadow: none;
+    word-wrap: break-word;
+  }
+  p {
+    margin: 16px 0;
+    line-height: 1.2;
+  }
+  h1 {
+    font-size: 2em;
+    color: $heading-color;
+    margin-top: 2em !important;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  small {
+    font-size: 1em;
+  }
+  section img {
+    border: 0px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  }
+  ul ul {
+    list-style-type: circle;
+  }
+  pre {
+    code {
+      font-size: 0.9em;
+      padding-left: 1em;
+      line-height: 1.4em;
+      max-height: 600px;
+      word-wrap: break-word;
+    }
+    width: 100%;
+    margin: 16px auto;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0);
+  }
+  #subtitle h2 {
+    color: black !important;
+    text-align: center;
+    margin-top: 20px !important;
+    font-size: 1.2em;
+  }
+  .slide-number {
+    color: $slidenum-color;
+    padding: 10px;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    z-index: 0;
+    border-radius: 16px;
+    background-color: $slidenumbg-color;
+    left: 8px;
+    bottom: 10px;
+  }
+  .controls {
+    color: $control-color;
+    right: 20px;
+    bottom: 60px;
+  }
+  .warning {
+      color: red;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+}
+
+#stoeps-footer {
+  position: absolute;
+  display: table;
+  width: 100%;
+  height: 30px;
+  bottom: 5px;
+  font-size: 0.5em !important;
+  color: $footer-color;
+  border-top: 2px solid $footerborder-color;
+  background-color: $footerbg-color;
+  padding-top: 10px;
+  z-index: -1;
+  a {
+      float: right;
+      right: 4px;
+      bottom: 4px;
+      width: 93px;
+  }
+  .element {
+      width: 33%;
+      text-align: center;
+      vertical-align: middle;
+  }
+}
+
+.footer span {
+  display: table-cell;
+  padding: 0px 15px 5px;
+  text-align: left;
+}
+
+section h2 {
+  color: $heading-color !important;
+  text-align: left;
+}
+
+section[data-state="topic"] h2 {
+  font-size: 3em;
+  color: white !important;
+  text-align: center;
+  position: fixed;
+  top: 10px;
+}
+
+td.valign-top {
+  vertical-align: top;
+}
+
+#contact {
+  font-size: 16px;
+  font-family: roboto;
+  position: absolute;
+  left: 0;
+  margin-top: 10px;
+  p {
+    line-height: 1.5em;
+  }
+  a {
+    &:link, &:visited, &:hover, &:active {
+      color: #000;
+    }
+  }
+}
+
+#author {
+  margin-top: 2em;
+  p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 0.8em;
+  }
+}
+
+.slide-background.present {
+  background-position: top 20px right 20px;
+  &[data-background-size='cover'] {
+    background-position: top left !important;
+  }
+}
+
+.ulist {
+  text-align: left;
+}
+

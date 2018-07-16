@@ -1,0 +1,1 @@
+image::images/froscon.png[background, position=right top, size=300px auto]

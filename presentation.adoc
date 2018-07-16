@@ -1,0 +1,112 @@
+= Documentation With Any Editor
+:email: christoph.stoettner@stoeps.de
+:revnumber: 1.0
+:revdate: 23.08.2018
+:revremark: Initial Release
+:encoding: utf-8
+:lang: en
+:title-logo-image: image::images/panagenda.png[]
+:toc:
+:doctype: article
+:icons: font
+:quick-uri: http://www.stoeps.de
+:numbered!:
+:revealjs_controls: false
+:revealjs_progress: true
+:revealjs_center: false
+:revealjs_slideNumber: true
+:revealjs_history: true
+:revealjs_previewLinks: true
+:customcss: css/custom.css
+//////
+:title-slide-background-image: images/dnug45/dnug45-logo.png
+:title-slide-background-size: 300px auto
+:title-slide-background-position: right 20px top 20px
+//////
+:docinfo1: true
+
+:twitter-tag: @stoeps
+:conference-tag: #froscon18
+:talk-tag: #AnyEditor
+
+include::_attributes.adoc[]
+
+++++
+<!--<div id="subtitle"><h2>für IBM Connections und IBM Domino</h2></div>-->
+<div id="author">
+   <p><small>Christoph Stoettner</small></p>
+   <p><small>+49 173 8588719</small></p>
+   <p><small>christoph.stoettner@stoeps.de</small></p>
+</div>
+++++
+
+== Christoph Stoettner
+include::slide-froscon.adoc[]
+
+[cols="3,7"]
+|===
+a|
+++++
+<div id="contact">
+++++
+image::images/stoeps.png[300,200]
+icon:phone[] +49 173 8588719 +
+icon:envelope[] mailto:christoph.stoettner@panagenda.com[christoph.stoettner@panagenda.com] +
+icon:linkedin[] https://linkedin.com/in/christophstoettner[linkedin.com/in/christophstoettner] +
+icon:wordpress[] https://www.stoeps.de[www.stoeps.de] +
+icon:skype[] christophstoettner +
+icon:twitter[] https://twitter.com/stoeps[@stoeps] +
+++++
+</div>
+++++
+a|
+* Senior Consultant bei panagenda
+** IBM Domino seit 1999
+** IBM Connections seit 2009
+* Schwerpunkte
+** Migrationen, Installationen
+** Performance, Monitoring, Security
+** panagenda ConnectionsExpert
+** Microservices, IBM Cloud Private
+|===
+
+== Ein bisschen Geschichte
+include::slide-froscon.adoc[]
+
+[%step]
+* Douglas Adams: +
+[%step]
+** Alles, was zum Zeitpunkt unserer Geburt bereits vorhanden war, wird als Bestandteil der natürlichen Ordnung empfunden.
+** Alles, was in der Zeit zwischen dem fünfzehnten und fünfunddreißigsten Lebensjahr erfunden wurde, ist aufregend, revolutionär und fördert vielleicht sogar die eigene Karriere.
+** **Alles, was nach deinem 35. Lebensjahr erfunden wurde, ist gegen die natürliche Ordnung der Dinge.**
+* https://martin.leyrer.priv.at/downloads/talks/2018/gpn18%20-%20Moderne%20Kommandozeilentools.pdf[Gestohlen bei Martin Leyrer - Moderne Kommandozeilen Werkzeuge]
+
+[NOTE.speaker]
+--
+* Douglas Adams
+--
+
+
+[subs="attributes"]
+++++
+<script type="text/javascript">
+    window.addEventListener("load", function() {
+
+        revealDiv = document.querySelector("body div.reveal")
+        footer = document.getElementById("stoeps-footer");
+        revealDiv.appendChild(footer);
+
+    } );
+</script>
+<div id="stoeps-footer" class="footer">
+<!--    <span id="date" class="element">{revdate}</span>-->
+    <span id="twitter" class="element">{twitter-tag}</span>
+    <span id="conference" class="element">{conference-tag}</span>
+    <span id="talk" class="element">{talk-tag}</span>
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" ><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+</div>
+<link rel="stylesheet" href="highlight/styles/googlecode.css">
+<script src="highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+++++
+// vim: set syntax=asciidoc:

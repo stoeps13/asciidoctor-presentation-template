@@ -1,0 +1,1 @@
+image::images/slidebackground-title.png[background, size=cover]
