@@ -13,8 +13,6 @@
 :quick-uri: http://www.stoeps.de
 :numbered:
 
-include::_attributes.adoc[]
-
 == Start a new presentation
 
 [source,bash]
