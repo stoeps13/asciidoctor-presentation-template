@@ -23,6 +23,40 @@ bundle --path=.bundle/gems --binstubs=.bundle/.bin
 cd reveal.js
 git submodule init
 git submodule update
+cd ..
+mkdir css
 ----
 
+== Presentation background
 
+I often have situation with different screen resolutions. So I prepare two different sets of slide backgrounds.
+
+These are saved as
+
+* `images/slidebackground-16to9.png`
+* `images/slidebackground-title-16to9.png`
+* `images/slidebackground-4to3.png`
+* `images/slidebackground-title-4to3.png`
+
+Within the `Makefile` I can decide which on I need. The `switch.sh` script will create symlinks to the used background image.
+
+[source,bash]
+----
+# Create presentation 16:9
+make presentation
+# Create 4:3 presentation
+make presentation_4to3
+----
+
+== PDF Version
+
+I use docker with decktape to export the slides to pdf. You just need a installed docker version on your computer and then create pdf with `make pdf`.
+
+My presentation runs in an other docker container with nginx and uses port 8090, so in the `Makefile` decktape uses http://<ip>:8090/presentation.html.
+
+To run the presentation in docker, run this from the presentation folder:
+
+[source]
+----
+docker run -v $(pwd):/usr/share/nginx/html:ro --name presentation -p 8090:80 nginx
+----
