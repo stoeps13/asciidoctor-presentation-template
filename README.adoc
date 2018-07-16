@@ -1,0 +1,27 @@
+= README
+:author: Christoph Stoettner
+:email: christoph.stoettner@stoeps.de
+:revnumber: 1.0
+:revdate: 2018-07-16
+:revremark: Initial Release
+:encoding: utf-8
+:lang: en
+:toc:
+:imagesdir: images
+:doctype: article
+:icons: font
+:quick-uri: http://www.stoeps.de
+:numbered:
+
+include::_attributes.adoc[]
+
+== Start a new presentation
+
+[source,bash]
+----
+git clone git@github.com:stoeps13/asciidoctor-presentation-template.git
+bundle config --local github.https true
+bundle --path=.bundle/gems --binstubs=.bundle/.bin
+----
+
+
