@@ -5,7 +5,7 @@
 :revremark: Initial Release
 :encoding: utf-8
 :lang: en
-:title-logo-image: image::images/panagenda.png[]
+:title-logo-image: image::images/logo.png[]
 :toc:
 :doctype: article
 :icons: font
