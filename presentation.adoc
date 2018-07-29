@@ -23,7 +23,7 @@
 :title-slide-background-size: 300px auto
 :title-slide-background-position: right 20px top 20px
 //////
-:docinfo1: true
+// :docinfo1: true
 
 :twitter-tag: @stoeps
 :conference-tag: #froscon18
@@ -35,57 +35,99 @@ include::_attributes.adoc[]
 <!--<div id="subtitle"><h2>für IBM Connections und IBM Domino</h2></div>-->
 <div id="author">
    <p><small>Christoph Stoettner</small></p>
-   <p><small>+49 173 8588719</small></p>
-   <p><small>christoph.stoettner@stoeps.de</small></p>
+   <!--p><small>+49 173 8588719</small></p-->
+   <!--p><small>christoph.stoettner@stoeps.de</small></p-->
 </div>
 ++++
 
 == Christoph Stoettner
 include::slide-froscon.adoc[]
 
-[cols="3,7"]
-|===
-a|
-++++
-<div id="contact">
-++++
-image::images/stoeps.png[300,200]
-icon:phone[] +49 173 8588719 +
-icon:envelope[] mailto:christoph.stoettner@stoeps.de[christoph.stoettner@stoeps.de] +
-icon:linkedin[] https://linkedin.com/in/christophstoettner[linkedin.com/in/christophstoettner] +
-icon:link[] https://www.stoeps.de[www.stoeps.de] +
-icon:skype[] christophstoettner +
-icon:twitter[] https://twitter.com/stoeps[@stoeps] +
-++++
-</div>
-++++
-a|
-* Senior Consultant at panagenda
-* daily work
-** often means installing application servers
-** change config options
-** performance optimizing
-* OSS since late 1990ies
+//
+// [cols="3,7"]
+// |===
+// a|
+// ++++
+// <div id="contact">
+// ++++
+// image::images/stoeps.png[300,200]
+// // icon:phone[] +49 173 8588719 +
+// icon:envelope[] mailto:christoph.stoettner@stoeps.de[christoph.stoettner@stoeps.de] +
+// icon:linkedin[] https://linkedin.com/in/christophstoettner[linkedin.com/in/christophstoettner] +
+// icon:link[] https://www.stoeps.de[www.stoeps.de] +
+// //icon:skype[] christophstoettner +
+// icon:twitter[] https://twitter.com/stoeps[@stoeps] +
+// ++++
+// </div>
+// ++++
+// a|
+//
+* IBM Application Servers
+** Installation, Configuration
+** Performance Optimization, Stresstesting
+* Started with Linux / OSS around 1994/1995
 ** Linux Kernel < 1.0
-** German Magazine: DOS Magazin
-|===
+** Slackware
+* VIM lover
+** maybe too stupid for Emacs
+// |===
 
 == My history of documentation
 include::slide-froscon.adoc[]
 
-* MS Excel with Dropbox
-* MS Word with Sharepoint or Mail
-* Several Wiki engines
-* Evernote (Linux client long time a problem, new license limits devices)
-* Adding config with screenshots or copy & paste
-* Latest with opening in other Office version or product with 100% compatibility -> layout or document broken
-** sometimes switching printer is enough
+* Content of most of my documentations
+** Config options (XML, GUI)
+** Screenshots (GUI)
+** Parts of Property Files
+* Used tools
+** MS Excel / Libreoffice (with Dropbox)
+** MS Word / Libreoffice with Sharepoint or Mail
+** Several Wiki engines
+** Evernote
 
+[NOTE.speaker]
+--
+* Mostly influenced from colleagues which only knew office products.
+* Later influenced from Mac lovers (Evernote).
+* but also manually configure monitoring is lame
+--
+
+== My needs
+include::slide-froscon.adoc[]
+
+* Searchable documentation
+* Editing on mobile, tablet, notebook, customer computer, server (ssh)
+* Output formats depend on customer and project
+* No manual task to update output format
+* Offline support
+* Versioning
+
+== Why did I stop using Cloud or Office products
+include::slide-froscon.adoc[]
+
+* Evernote
+** Linux client long time a problem
+** new license limits device count
+* Office
+** compatibility
+** Edit on different devices, versions
+** sometimes switching printer is enough to flip images around
+
+== Why not using a wiki?
+include::slide-froscon.adoc[]
+
+* Edit from mobile often not possible
+* Documenting the Wiki itself?
+* Not accessible when down
+* Syntax different from one wiki to another
+* Customer / PM often needs something printer friendly
 
 == Markdown and rst
+include::slide-froscon.adoc[]
 
 * Started writing in Markdown
 * Some software supports markdown directly
+* Great for typing notes
 
 [subs="attributes"]
 ++++
