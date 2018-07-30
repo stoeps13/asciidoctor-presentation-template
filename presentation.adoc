@@ -25,6 +25,8 @@
 //////
 // :docinfo1: true
 
+:slide: slide-froscon.adoc
+:titleslide: title.adoc
 :twitter-tag: @stoeps
 :conference-tag: #froscon18
 :talk-tag: #AnyEditor
@@ -41,7 +43,7 @@ include::_attributes.adoc[]
 ++++
 
 == Christoph Stoettner
-include::slide-froscon.adoc[]
+include::{slide}[]
 
 //
 // [cols="3,7"]
@@ -73,7 +75,7 @@ include::slide-froscon.adoc[]
 // |===
 
 == My history of documentation
-include::slide-froscon.adoc[]
+include::{slide}[]
 
 * Content of most of my documentations
 ** Config options (XML, GUI)
@@ -93,7 +95,7 @@ include::slide-froscon.adoc[]
 --
 
 == My needs
-include::slide-froscon.adoc[]
+include::{slide}[]
 
 * Searchable documentation
 * Editing on mobile, tablet, notebook, customer computer, server (ssh)
@@ -103,7 +105,7 @@ include::slide-froscon.adoc[]
 * Versioning
 
 == Why did I stop using Cloud or Office products
-include::slide-froscon.adoc[]
+include::{slide}[]
 
 * Evernote
 ** Linux client long time a problem
@@ -114,7 +116,7 @@ include::slide-froscon.adoc[]
 ** sometimes switching printer is enough to flip images around
 
 == Why not using a wiki?
-include::slide-froscon.adoc[]
+include::{slide}[]
 
 * Edit from mobile often not possible
 * Documenting the Wiki itself?
@@ -123,11 +125,55 @@ include::slide-froscon.adoc[]
 * Customer / PM often needs something printer friendly
 
 == Markdown and rst
-include::slide-froscon.adoc[]
+include::{slide}[]
 
 * Started writing in Markdown
 * Some software supports markdown directly
-* Great for typing notes
+* Cool WYSIWIG editors
+* Great for typing notes (Still using it on mobile)
+
+== Asciidoc / Asciidoctor
+include::{slide}[]
+
+* Only some short syntax tips
+* More automation later
+* Differences to Markdown
+
+== Admonition Blocks
+include::{slide}[]
+
+* Admonition blocks (Warning, Caution, Important, Note, Tip)
+* Font-Awesome Icons with `:icons: font`
+
+[source, asciidoc]
+----
+WARNING: This is a warning
+----
+
+WARNING: This is a warning
+
+[source,asciidoc]
+----
+CAUTION: This is a caution
+----
+
+CAUTION: This is a caution
+
+[source,asciidoc]
+----
+IMPORTANT: This is important
+----
+
+IMPORTANT: This is important
+
+== Pandoc
+include::{slide}[]
+
+== Print
+include::{slide}[]
+
+== Presentation
+include::{slide}[]
 
 [subs="attributes"]
 ++++

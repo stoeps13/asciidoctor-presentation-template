@@ -20,4 +20,4 @@ presentation_4to3: 4to3 presentation
 	echo "Links for 4to3 created"
 
 pdf: presentation
-	docker run --rm --shm-size 2G -v /home/stoeps/docs/presentations-reveal:/slides astefanutti/decktape --size 1600x900 http://172.17.0.1:8090/presentation.html presentation.pdf
+	docker run --rm --shm-size 2G -v /home/stoeps/docs/froscon18/presentation:/slides astefanutti/decktape --size 1600x900 http://172.17.0.2/presentation.html presentation.pdf

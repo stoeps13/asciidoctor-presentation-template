@@ -7,7 +7,7 @@
 @import url(../reveal.js/css/theme/white.css);
 
 .reveal {
-  font-family: Roboto, "Source Sans Pro", Helvetica, sans-serif;
+  font-family: /*$font0,*/ $font1, $font2, $font-family;
   font-weight: normal;
   color: #222;
   .slide {
@@ -16,7 +16,7 @@
   h1, h2, h3, h4, h5, h6 {
     margin: -24px 0 0 0 !important;
     color: #222;
-    font-family: Roboto, "Source Sans Pro", Helvetica, sans-serif;
+    font-family: /*$font0,*/ $font1, $font2, $font-family;
     font-weight: bold;
     line-height: 1.2;
     letter-spacing: normal;
@@ -47,16 +47,23 @@
     list-style-type: circle;
   }
   pre {
-    code {
-      font-size: 0.9em;
-      padding-left: 1em;
-      line-height: 1.4em;
-      max-height: 600px;
-      word-wrap: break-word;
-    }
     width: 100%;
     margin: 16px auto;
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0);
+    border: 1px solid $src-border-color;
+    border-radius: 5px;
+    background-color: $src-bg-color;
+    code {
+      font-family: $font-mono0, $font-mono-family;
+      font-size: 0.9em;
+      padding-left: 1em;
+      color: $src-color;
+      line-height: 1.4em;
+      max-height: 600px;
+      word-wrap: break-word;
+      padding: 5px;
+      padding-left: 20px;
+    }
   }
   #subtitle h2 {
     color: black !important;
@@ -74,17 +81,39 @@
     border-radius: 16px;
     background-color: $slidenumbg-color;
     left: 8px;
-    bottom: 10px;
   }
   .controls {
     color: $control-color;
     right: 20px;
     bottom: 60px;
   }
-  .warning {
-      color: red;
+  .admonitionblock{
+      border: 1px solid $slidenum-color;
+      border-radius: 10px;
+      background-color: #F7F8E0;
+      padding: 5px;
       margin-top: 10px;
       margin-bottom: 10px;
+  }
+  .warning {
+      color: $warning-color;
+      border-color: $warning-color;
+  }
+  .caution {
+      color: $caution-color;
+      border-color: $caution-color;
+  }
+  .important {
+      color: $important-color;
+      border-color: $important-color;
+  }
+  .note {
+      color: $note-color;
+      border-color: $note-color;
+  }
+  .tip {
+      color: $tip-color;
+      border-color: $tip-color;
   }
 }
 
@@ -93,7 +122,7 @@
   display: table;
   width: 100%;
   height: 30px;
-  bottom: 5px;
+  bottom: 0;
   font-size: 0.5em !important;
   color: $footer-color;
   border-top: 2px solid $footerborder-color;
