@@ -8,7 +8,6 @@
 :title-logo-image: image::images/logo.png[]
 :toc:
 :doctype: article
-:icons: font
 :quick-uri: http://www.stoeps.de
 :numbered!:
 :revealjs_controls: false
@@ -17,6 +16,7 @@
 :revealjs_slideNumber: true
 :revealjs_history: true
 :revealjs_previewLinks: true
+:icons: font
 :customcss: css/custom.css
 //////
 :title-slide-background-image: images/dnug45/dnug45-logo.png
@@ -138,6 +138,37 @@ include::{slide}[]
 * Only some short syntax tips
 * More automation later
 * Differences to Markdown
+ ** https://github.com/asciidoctor/asciidoctor.org/blob/master/docs/_includes/asciidoc-vs-markdown.adoc[role=long]
+
+== Syntax
+include::{slide}[]
+
+.Headings
+[source]
+----
+= H1
+== H2
+=== H3
+----
+
+.Lists
+[source]
+----
+* Bullet Points
+ ** Sub Bullet Point
+----
+
+* Bullet Points
+ ** Sub Bullet Point
+
+[source]
+----
+. Numbered Lists
+. Numbered 2
+----
+
+. Numbered Lists
+. Numbered 2
 
 == Admonition Blocks
 include::{slide}[]
@@ -166,6 +197,58 @@ IMPORTANT: This is important
 
 IMPORTANT: This is important
 
+== Including Files
+include::{slide}[]
+
+* Powerful
+* Include complete files
+** Split your documentation files
+** Config Files for documentation
+* Include only parts
+* Add callouts
+
+[source]
+----
+include::path/filename[] // <1>
+include::path/filename[lines=10..15] // <2>
+include::path/filename[tags=mytag] // <3>
+----
+<1> Include whole file
+<2> Include lines 10-15
+<3> Include area between mytag tags tag::mytag, end::mytag
+
+== Example Include
+include::{slide}[]
+
+[source]
+----
+ ...
+        <title>example</title>
+        <!-- tag::stoeps[] -->
+        <!-- even comments -->
+    </head>
+    <body>
+    <h1>Test</h1>
+    <!-- end::stoeps[] -->
+    </body>
+ ...
+----
+
+.Include in our asciidoc source
+[source]
+----
+ [source, indent=0]
+ ----
+ include::test.html[tags=stoeps]
+ ----
+----
+
+.Included source
+[source, indent=0]
+----
+include::include/test.html[tags=stoeps]
+----
+
 == Pandoc
 include::{slide}[]
 
@@ -174,6 +257,12 @@ include::{slide}[]
 
 == Presentation
 include::{slide}[]
+
+== Screenshots
+include::{slide}[]
+
+.Google Screenshot
+screenshot::https://google.com[google]
 
 [subs="attributes"]
 ++++

@@ -14,7 +14,7 @@
       width: 1280px !important;
   }
   h1, h2, h3, h4, h5, h6 {
-    margin: -24px 0 0 0 !important;
+    margin: -72px 0 0 0 !important;
     color: #222;
     font-family: /*$font0,*/ $font1, $font2, $font-family;
     font-weight: bold;
@@ -35,6 +35,7 @@
   }
   h2 {
     font-size: 1.5em;
+    margin-bottom: 12px;
   }
   small {
     font-size: 1em;
@@ -55,7 +56,7 @@
     background-color: $src-bg-color;
     code {
       font-family: $font-mono0, $font-mono-family;
-      font-size: 0.9em;
+      font-size: 0.8em;
       padding-left: 1em;
       color: $src-color;
       line-height: 1.4em;
@@ -68,7 +69,7 @@
   #subtitle h2 {
     color: black !important;
     text-align: center;
-    margin-top: 20px !important;
+    margin-top: 10px !important;
     font-size: 1.2em;
   }
   .slide-number {
@@ -114,6 +115,33 @@
   .tip {
       color: $tip-color;
       border-color: $tip-color;
+  }
+  .olist {
+      text-align: left;
+  }
+  .listingblock {
+      .title {
+          font-size: 0.9em;
+          text-align: left;
+      }
+  }
+  .colist.arabic {
+      margin: 0;
+      table {
+          margin: 0;
+          text-align: left;
+          tr, td {
+              margin: 0;
+              text-align: left;
+              border: 0;
+              font-size: 0.8em;
+              padding-top: 0;
+          }
+          td {
+              padding-bottom: 3px;
+          }
+
+      }
   }
 }
 
@@ -201,3 +229,44 @@ td.valign-top {
   text-align: left;
 }
 
+/* Callout formats */
+.conum[data-value] {
+  display: inline-block;
+  color: #fff !important;
+  background-color: rgba(50, 150, 50, 0.8);
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  text-align: center;
+  font-size: .75em;
+  width: 1.67em;
+  height: 1.67em;
+  line-height: 1.67em;
+  font-family: "Open Sans","DejaVu Sans",sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  * {
+    color: #fff !important;
+  }
+  + b {
+    display: none;
+  }
+  &:after {
+    content: attr(data-value);
+  }
+}
+
+pre .conum[data-value] {
+  position: relative;
+  top: -.125em;
+}
+
+b.conum * {
+  color: inherit !important;
+}
+
+.conum:not([data-value]):empty {
+  display: none;
+}
+a.long {
+    font-size: 0.8em;
+}
