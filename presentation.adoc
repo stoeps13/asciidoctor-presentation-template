@@ -309,7 +309,7 @@ IMPORTANT: This is important
 == Admonition Blocks in Html and PDF
 include::{slide}[]
 
-[source]
+[source, role=half]
 ----
 NOTE: A note
 
@@ -322,8 +322,8 @@ WARNING: Warning message
 CAUTION: Caution, be careful
 ----
 
-image::images/admonition-html.png[]
-image::images/admonition-pdf.png[]
+image::images/admonition-html.png[role="clear left"]
+image::images/admonition-pdf.png[role=left]
 
 == Menus, Keys and Buttons
 include::{slide}[]
