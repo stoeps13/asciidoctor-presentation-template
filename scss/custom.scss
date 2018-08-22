@@ -14,7 +14,8 @@
       width: 1280px !important;
   }
   h1, h2, h3, h4, h5, h6 {
-    margin: -72px 0 0 0 !important;
+    margin: -54px 0 0 0 !important;
+    clear:both;
     color: #222;
     font-family: /*$font0,*/ $font1, $font2, $font-family;
     font-weight: bold;
@@ -37,12 +38,16 @@
     font-size: 1.5em;
     margin-bottom: 12px;
   }
+  div.paragraph {
+      text-align: left;
+  }
   small {
     font-size: 1em;
   }
   section img {
     border: 0px !important;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 0 10px lightgray;
   }
   ul ul {
     list-style-type: circle;
@@ -56,6 +61,7 @@
     background-color: $src-bg-color;
     code {
       font-family: $font-mono0, $font-mono-family;
+      border-radius: 4px;
       font-size: 0.8em;
       padding-left: 1em;
       color: $src-color;
@@ -119,14 +125,41 @@
   .olist {
       text-align: left;
   }
+  .imageblock {
+      /* float: left; */
+      margin-right: 30px;
+  }
   .listingblock {
+      clear: both;
       .title {
           font-size: 0.9em;
           text-align: left;
       }
   }
+  .half {
+      width: 50%;
+      float: left;
+      margin-left: 20px;
+  }
+  .quad {
+      width: 75%;
+      float: left;
+  }
+  .topmargin {
+      margin-top: 65px;
+  }
+  .clear {
+      clear: both;
+  }
+  .left {
+      float: left;
+  }
+  .right {
+      float: right;
+  }
   .colist.arabic {
       margin: 0;
+      margin-top: 20px;
       table {
           margin: 0;
           text-align: left;

@@ -1,6 +1,6 @@
 presentation: 16to9
 	echo "Build presentation"
-	bundle exec asciidoctor-revealjs presentation.adoc
+	asciidoctor-revealjs -r asciidoctor-diagram presentation.adoc
 	echo "Update CSS"
 	sass --scss scss/custom.scss css/custom.css
 

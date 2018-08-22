@@ -4,3 +4,6 @@ css
 Gemfile.lock
 .bundle
 .sass-cache
+.asciidoctor
+.gradle
+*.png

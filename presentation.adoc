@@ -10,12 +10,14 @@
 :doctype: article
 :quick-uri: http://www.stoeps.de
 :numbered!:
+:experimental:
 :revealjs_controls: false
 :revealjs_progress: true
 :revealjs_center: false
 :revealjs_slideNumber: true
 :revealjs_history: true
 :revealjs_previewLinks: true
+:syntax-highlighter: rouge
 :icons: font
 :customcss: css/custom.css
 //////
@@ -41,6 +43,15 @@ include::_attributes.adoc[]
    <!--p><small>christoph.stoettner@stoeps.de</small></p-->
 </div>
 ++++
+
+== Shoutout / Contribution
+
+* First of all a big thank you to:
+ ** Organisation team of Froscon 2018
+ ** https://asciidoctor.org[Asciidoctor] developers
+ ** https://doctoolchain.github.io/docToolchain/[DocToolChain] developers
+* Thanks to all sponsors and attendees
+
 
 == Christoph Stoettner
 include::{slide}[]
@@ -110,6 +121,7 @@ include::{slide}[]
 * Evernote
 ** Linux client long time a problem
 ** new license limits device count
+** No markdown support
 * Office
 ** compatibility
 ** Edit on different devices, versions
@@ -131,6 +143,8 @@ include::{slide}[]
 * Some software supports markdown directly
 * Cool WYSIWIG editors
 * Great for typing notes (Still using it on mobile)
+* A little bit to simple
+ ** including source files missing
 
 == Asciidoc / Asciidoctor
 include::{slide}[]
@@ -138,37 +152,132 @@ include::{slide}[]
 * Only some short syntax tips
 * More automation later
 * Differences to Markdown
- ** https://github.com/asciidoctor/asciidoctor.org/blob/master/docs/_includes/asciidoc-vs-markdown.adoc[role=long]
+** https://github.com/asciidoctor/asciidoctor.org/blob/master/docs/_includes/asciidoc-vs-markdown.adoc[role=long]
+* Text only
+** Version Control with GIT
 
-== Syntax
+== Syntax - Headings
 include::{slide}[]
 
-.Headings
-[source]
+[source, role=half]
 ----
-= H1
-== H2
-=== H3
-----
+ :numbered: # <1>
 
-.Lists
-[source]
+ == H2
+ === H3
+ ==== H4
+
+ :!numbered: # <2>
+
+ == H2
+ === H3
+ ==== H4
 ----
+<1> Headings numbered
+<2> Headings without numbers
+
+image::images/headings.png[role=right]
+
++++
+<div class="quad">
+<ul>
+<li>H1 only appears once in Asciidoctor</li>
+<li>numbered can be set in document header for all headings</li>
+</ul>
+</div>
++++
+
+== Heading above blocks and images
+include::{slide}[]
+
+* Can be used with images and all kind of blocks, no TOC entry
+
+[source,indent=0, role=half]
+----
+ .Heading // <1>
+ [source]
+ ----
+ ls -al
+ ----
+
+ .Image // <2>
+ image::images/test.png[]
+----
+<1> Heading above Code block
+<2> Image heading
+
+image::images/source-heading.png[]
+image::images/pngtest.png[height=200px]
+
+== Syntax - Lists
+include::{slide}[]
+
+[source, role=half]
+----
+=== Bullet Points
+
 * Bullet Points
  ** Sub Bullet Point
+
+=== Numbered Lists
+. Numbered List
+.. Sub 1
+.. Sub 2
+. Numbered 2
+
+=== Definition Lists
+
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage for operating system...
 ----
 
-* Bullet Points
- ** Sub Bullet Point
+image::images/listings.png[]
+
+
+== Links, Images
+include::{slide}[]
+
+.Links
+[source,asciidoc]
+----
+ https://www.stoeps.de[]        ;; <1>
+ https://www.stoeps.de[Stoeps]  ;; <2>
+----
+<1> Shows just the link
+<2> Link text in brackets
+
+image::images/links.png[role=left]
+
+.Images
+[source]
+----
+image::sunset.jpg[]
+image::sunset.jpg[role=right] // <1>
+image::sunset.jpg[Sunset]     // <2>
+----
+<1> You can add roles to all elements and use CSS for formatting
+<2> Add a title tag to image
+
+== Use Inline Icons
+include::{slide}[]
+
+* You can add any Font Awesome Icon
+* Enable in document header
 
 [source]
 ----
-. Numbered Lists
-. Numbered 2
+:icons: font
 ----
 
-. Numbered Lists
-. Numbered 2
+.Some Examples
+[source, role=quad]
+----
+icon:twitter[] Twitter https://twitter.com[@stoeps]
+icon:linux[] Linux Icon
+icon:windows[] Windows Icon
+----
+
+image::images/icons.png[role=topmargin]
 
 == Admonition Blocks
 include::{slide}[]
@@ -197,15 +306,87 @@ IMPORTANT: This is important
 
 IMPORTANT: This is important
 
+== Admonition Blocks in Html and PDF
+include::{slide}[]
+
+[source]
+----
+NOTE: A note
+
+TIP: Here is a tip
+
+IMPORTANT: That's important
+
+WARNING: Warning message
+
+CAUTION: Caution, be careful
+----
+
+image::images/admonition-html.png[]
+image::images/admonition-pdf.png[]
+
+== Menus, Keys and Buttons
+include::{slide}[]
+
+[source]
+----
+:experimental: // <1>
+----
+<1> Following features need experimental set
+
+[source]
+----
+.Copy Text
+menu:Edit[Copy Special > Text]
+
+.Button
+Press kbd:[OK]
+
+.Keyboard
+kbd:[Ctrl+C] to stop this.
+----
+
+image::images/experimental.png[]
+image::images/experimental-pdf.png[]
+
+== Sourcecode
+include::{slide}[]
+
+* Adding [source]
+[source, indent=0]
+----
+ .A Python function
+ [source,python]
+ ----
+ def function():
+    var x = 10
+    return x
+ ----
+----
+
+.A Python function
+[source,python]
+----
+def function():
+    var x = 10
+    return x
+----
+
+* Syntax Highlighting with Pygments, Highlightjs or Rouge
+
+[source]
+----
+:source-highlighter: pygments
+----
+
 == Including Files
 include::{slide}[]
 
+* Split longer documents and include Asciidoc Source
+* Include any type of files in `[source]`
 * Powerful
 * Include complete files
-** Split your documentation files
-** Config Files for documentation
 * Include only parts
-* Add callouts
 
 [source]
 ----
@@ -222,16 +403,15 @@ include::{slide}[]
 
 [source]
 ----
- ...
-        <title>example</title>
-        <!-- tag::stoeps[] -->
-        <!-- even comments -->
-    </head>
-    <body>
-    <h1>Test</h1>
-    <!-- end::stoeps[] -->
-    </body>
- ...
+...
+    <title>example</title>
+    <!-- tag::stoeps[] -->
+    <!-- even comments -->
+</head><body>
+<h1>Test</h1>
+<!-- end::stoeps[] -->
+</body>
+...
 ----
 
 .Include in our asciidoc source
@@ -249,20 +429,253 @@ include::{slide}[]
 include::include/test.html[tags=stoeps]
 ----
 
-== Pandoc
+== Variables
 include::{slide}[]
 
-== Print
+* Definition
+
+[source, asciidoc]
+----
+:variable: content  ;; <1>
+:OS: Linux          ;; <2>
+:SLASH: /           ;; <3>
+----
+<1> Generic definition
+<2> Variable OS set to Linux
+<3> Variable SLASH set to /
+
+
+== Conditional Directives
 include::{slide}[]
 
-== Presentation
+[source]
+----
+  :OS: Linux                      // <1>
+  ifeval::["{OS}" == "Linux"]     // <2>
+  icon:linux[] rocks!
+  endif::[]
+
+  :OS: Windows                    // <3>
+  ifeval::["{OS}" == "Windows"]   // <4>
+  icon:windows[] Real men don't click!
+  endif::[]
+  :OS: Linux
+----
+<1> Set OS = Linux
+<2> If OS = Linux
+<3> Set OS = Windows
+<4> If OS = Windows
+
+image::images/conditional-html.png[]
+image::images/conditional-pdf.png[]
+
+== Add Variables to extra file
 include::{slide}[]
 
-== Screenshots
+
+== Including Diagrams
 include::{slide}[]
 
-.Google Screenshot
-screenshot::https://google.com[google]
+* https://asciidoctor.org/docs/asciidoctor-diagram/[]
+* Asciidoctor supports a lot of different formats
+** ditaa
+** plantuml
+
+== Diagram - ditaa
+include::{slide}[]
+
+[source]
+----
+[ditaa]
+....
+               +-------------+
+               | Asciidoctor |-------+
+               |   diagram   |       |
+               +-------------+       | PNG out
+                   ^                 |
+                   | ditaa in        |
+                   |                 v
++--------+   +--------+----+    /---------------\
+|        | --+ Asciidoctor +--> |               |
+ |Document|   +-------------+    |   Beautiful   |
+ |     {d}|   |   !magic!   |    |    Output     |
+ +---+----+   +-------------+    \---------------/
+....
+----
+
+[ditaa]
+....
+                   +-------------+
+                   | Asciidoctor |-------+
+                   |   diagram   |       |
+                   +-------------+       | PNG out
+                       ^                 |
+                       | ditaa in        |
+                       |                 v
+ +--------+   +--------+----+    /---------------\
+ |        | --+ Asciidoctor +--> |               |
+ |Document|   +-------------+    |   Beautiful   |
+ |     {d}|   |   !magic!   |    |    Output     |
+ +---+----+   +-------------+    \---------------/
+....
+
+== Plantuml
+include::{slide}[]
+
+[source]
+----
+[plantuml, diagram-classes, png]
+....
+class BlockProcessor
+class DiagramBlock
+class DitaaBlock
+class PlantUmlBlock
+
+BlockProcessor <|-- DiagramBlock
+DiagramBlock <|-- DitaaBlock
+DiagramBlock <|-- PlantUmlBlock
+....
+----
+
+[plantuml, diagram-classes, png]
+....
+class BlockProcessor
+class DiagramBlock
+class DitaaBlock
+class PlantUmlBlock
+
+BlockProcessor <|-- DiagramBlock
+DiagramBlock <|-- DitaaBlock
+DiagramBlock <|-- PlantUmlBlock
+....
+
+== Plantuml Simple Flowdiagram
+include::{slide}[]
+
+[source]
+----
+[plantuml]
+....
+start
+
+if (Graphviz installed?) then (yes)
+  :process all\ndiagrams;
+else (no)
+  :process only
+  __sequence__ and __activity__ diagrams;
+endif
+
+stop
+....
+
+----
+
+[plantuml]
+....
+start
+
+if (Graphviz installed?) then (yes)
+  :process all\ndiagrams;
+else (no)
+  :process only
+  __sequence__ and __activity__ diagrams;
+endif
+
+stop
+....
+
+== Putting everything together
+include::{slide}[]
+
+* Let's have a look at a simple document with the main parts
+* Automate with Gitlab and CI/CD
+ ** It's also possible with Travis CI or Jenkins
+ ** Just to have a working example
+* Asciidoctor gradle
+* Git (with GitLab)
+* Gitlab CI/CD functionality
+
+== Main document - header
+include::{slide}[]
+
+[source,role=half]
+----
+= Example Project Documentation # <1>
+:author: Christoph Stoettner
+:email: christoph.stoettner@stoeps.de
+:revnumber: 1.0
+:revdate: 2018-08-24
+:revremark: Froscon 2018
+:encoding: utf-8
+:lang: en # <2>
+:experimental: <3>
+:title-logo-image: image::logo.png[] # <4>
+:toc: # <5>
+:imagesdir: images # <6>
+:doctype: article
+:icons: font # <7>
+:source-highlighter: rouge # <8>
+:quick-uri: https://www.stoeps.de
+:numbered: # <9>
+----
+<1> Document title
+<2> Language
+<3> Enable experimental features
+<4> Title logo (for pdf title page)
+<5> Create table of contents
+<6> Default images directory
+<7> Use Font Awesome Icons
+<8> Use rouge for Syntax Highlighting (works with PDF)
+<9> Headings numbered
+
+== Different Operating Systems
+include::{slide}[]
+
+== Final Document
+include::{slide}[]
+
+== Build Outputs
+include::{slide}[]
+
+* Lots of different Outputs
+ ** Html 5
+ ** PDF
+ ** ePub
+ ** Docbook
+ ** Confluence Wiki
+ ** Reveal JS Presentation
+* Installed on Windows, Linux or Mac
+ ** Easiest using the Asciidoctor Docker container
+
+[source]
+----
+docker run --rm -v $(pwd):/documents/ asciidoctor/asciidoctor asciidoctor main.adoc
+----
+
+== Different Outputs with Docker container
+include::{slide}[]
+
+.Html
+[source]
+----
+docker run --rm -v $(pwd):/documents/ asciidoctor/asciidoctor asciidoctor main.adoc
+----
+
+.Html with Plantuml
+[source]
+----
+docker run --rm -v $(pwd):/documents/ asciidoctor/asciidoctor asciidoctor -r asciidoctor-diagram main.adoc
+----
+
+== Additional informations
+include::{slide}[]
+
+* This presentation is build with
+ ** Asciidoctor
+ ** Reveal.js
+* Asciidoctor documentation
+* Github Repositories
+
 
 [subs="attributes"]
 ++++
